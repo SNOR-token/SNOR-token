@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+	<title>Load</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <script type="text/javascript" src="common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="config/stubparams.js"></script>
+    <script type="text/javascript" src="config/installparams.js"></script>
+    <script type="text/javascript" src="common/js/external.js"></script>
+    <script type="text/javascript" src="config/config.js"></script>
+    <script type="text/javascript" src="common/js/common.js"></script>
+    <script type="text/javascript">
+        if (environmentCheck()) {
+            notifyFinalStatus(Config_Status.NOTSTART);
+            setProductProperty();
+
+            if (isSilentlyLaunch()) {
+                appExternal.hideWindow();
+            }
+
+            if (Config_SupportSelfUpdate && !isSkipCheckUpdate()) {
+                Navigator.gotoUpdatePage();
+            } else {
+                var width = 647, height = 505;
+                var rate = supportAnyDPI(width, height);
+                var width = parseInt(width * rate);
+                var height = parseInt(height * rate);
+                appExternal.setWindowSize(width, height);
+                var resumeMode = appExternal.getResumeMode();
+                if (resumeMode === Config_ResumeMode.NONE) {
+                    Navigator.firstPage();
+                } else if (resumeMode === Config_ResumeMode.DOWNLOADING) {
+                    resumePage("Downloading", Config_MultiDownload);
+                } else if (resumeMode === Config_ResumeMode.INSTALLING) {
+                    resumePage("Installing", Config_MultiDownload);
+                }
+            }
+        } else {
+            notifyFinalStatus(Config_Status.ENVIRONMENT_NOT_MEET);
+            closeApp();
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript is disabled.</h1>
+    Please turn on the IE setting or allow JS running to complete the installation.
+</body>
+</html>

@@ -1,0 +1,26 @@
+#center_content {
+    background:white;
+    text-align: left;
+    font-size:14px;
+}
+#content_div {
+    padding:10px 50px 10px 30px;
+}
+.title_text {
+    font-size:16px;
+    font-weight:bold;
+}
+.float_right {
+    float:right;
+}
+
+#agreementContent{
+    border:1px solid;    
+    height:220px;
+    margin:10px 0px 10px 0px;
+    color:#706666;
+} 
+#agreementContentFrame{
+    height:215px;
+    width: 99.3%;
+} 

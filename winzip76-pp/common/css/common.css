@@ -1,0 +1,144 @@
+body{
+    text-align:center;
+    overflow:scroll;
+    overflow-y:hidden; 
+    overflow-x:hidden;
+    font-family:Arial, sans-serif;
+    margin:0px;
+}
+#main_body {
+    width: 644px;
+    height: 504px;
+    border:solid 1px #091e3d;
+    background:#daf0fb;
+}
+#main_body2 {
+    width: 644px;
+    height: 504px;
+    border:solid 1px #091e3d;
+    background:#ffffff;
+}
+.conter_div {
+    width:644px;
+    margin:0;
+    padding:0;
+    text-align:left;
+    overflow:hidden;
+}
+.conter_div2 {
+    width:605px;
+    margin:0;
+    padding:10px 20px;
+    text-align:left;
+    overflow:hidden;
+}
+.conter_div3 {
+    width:605px;
+    margin:0;
+    padding:10px 20px 0px 20px;
+    text-align:left;
+    overflow:hidden;
+}
+#center_content {
+    height:370px;
+}
+.header_close {
+    background:url(../img/close-normal.png) no-repeat center;
+    width:20px;
+    height:20px;
+    float:right;
+    margin:15px;
+    outline:none;
+}
+.header_close:hover {
+    background:url(../img/close-hover.png) no-repeat center;
+}
+.header_bar {
+    background:url(../img/headerImg.png) no-repeat center;
+    height:75px;
+}
+.header_logo {
+    float: left;
+    margin:19px 10px;
+}
+h4 {
+    margin-top:-1px;
+}
+h5 {
+    font-weight:normal;
+    font-size:15px;
+    margin-top:-12px;
+}
+.buttonDiv {
+    background:url(../img/footerImg.png) no-repeat center;
+    text-align:right;
+    height:60px;
+}
+button {
+    width:160px;
+    height:40px;
+    background:url(../img/button-normal.png) no-repeat center;
+    margin:8px 35px;
+    border: 0px solid;
+    font-size: 15px;
+    font-weight: bold;
+    outline:none;
+    color:#000000;
+}
+button:hover{
+    background: url(../img/button-hover.png) no-repeat center;
+}
+button:click{
+    background: url(../img/button-hover.png) no-repeat center;
+}
+.ui-progressbar {
+    position: relative;
+    width:595px;
+    height:20px;
+    margin:10px 20px;
+    padding:2px;
+ }
+ .ui-progressbar-value {
+     background:#557cb8;
+ }
+.progress-label {
+    position: absolute;
+    left: 5%;
+    top: 2px;
+    font-size:14px;
+    font-weight:bold;
+    color:#92bce2;
+ }
+.progress-value {
+    position: absolute;
+    left: 90%;
+    top: 2px;
+    font-size:14px;
+    font-weight:bold;
+    color:#92bce2;
+}
+.progress-marquee {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    height: 25px;
+    width: 80px;
+    background: transparent;
+}
+.contentDiv {
+    float:right;
+    position:relative;
+    margin-top:98px;
+    width:430px;
+    height:273px;
+}
+h1 {
+    font-size:30px;
+    font-weight:normal;
+    color:#103d80;
+    margin:5px 0px;
+}
+.content {
+    color:#103d80;
+}
+ 

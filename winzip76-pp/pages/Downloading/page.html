@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+    <title>Downloading</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <link rel="stylesheet" href="../../common/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <script type="text/javascript" src="../../common/js/external.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../config/lang.js"></script>
+    <script type="text/javascript" src="../../config/config.js"></script>
+    <script type="text/javascript" src="../../config/stubparams.js"></script>
+    <script type="text/javascript" src="../../config/installparams.js"></script>
+    <script type="text/javascript" src="../../config/installerlist.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script type="text/javascript" src="../Installing/page.js"></script>
+    <script type="text/javascript" src="features.js"></script>
+    <script type="text/javascript" src="page.js"></script>
+    <style>
+        #center_content{
+            background:#ffffff;
+        }
+        .content {
+            color:#000000;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            var progressbar = $("#progressbar");
+            var progressValue = $(".progress-value");
+            var progressLabel = $(".progress-label");
+            progressbar.progressbar({
+                value: false,
+                change: function () {
+                    if (Config_Steps.Current == Config_Steps.Install && isInstallDotNet) {
+                        progressValue.text(" ");
+                    } else {
+                        progressValue.text(progressbar.progressbar("value") + "%");
+                    }
+                },
+                complete: function () {
+                    progressValue.text(progressbar.progressbar("value") + "%");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="main_body2">
+        <div class="header_bar" onmousedown="dragWindow(this)">
+            <img id="header_logo_img" class="header_logo" src="../../common/img/header_logo.png" onmousedown="dragWindow(this)">
+            <button id="header_close_img" class="header_close" onclick="minimized();"></button>
+        </div>
+        <div id="center_content">
+            <div class="conter_div3">
+                <label class="downloading-name lang" text="DownloadingText"></label>
+            </div>
+            <div id="progressbar">
+                <div class="progress-label"></div>
+                <div class="progress-marquee"></div>
+                <div class="progress-value"></div>
+            </div>
+            <div class="conter_div2">
+                <h4 class="lang" text="installingDescriptionTitle"></h4>
+                <h5 class="content lang" text="installDescription"></h5>
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <button id="next" class="lang" text="nextButtonText" style="display:none;"></button>
+        </div>
+    </div>   
+</body>
+</html>

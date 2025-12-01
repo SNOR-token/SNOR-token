@@ -1,0 +1,9 @@
+#download_panel { 
+    height: auto;
+    width: 530px;
+    display: block;
+    text-align: left;
+    bottom: 200px;
+    margin-left: 60px;
+    font-size: 13px;
+}

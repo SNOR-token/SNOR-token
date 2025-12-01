@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+    <title>Welcome</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <link rel="stylesheet" type="text/css" href="../../common/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="page.css" />
+    <script type="text/javascript" src="../../common/js/external.js"></script>
+    <script type="text/javascript" src="../../common/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../../config/lang.js"></script>
+    <script type="text/javascript" src="../../config/config.js"></script>
+    <script type="text/javascript" src="../../config/stubparams.js"></script>
+    <script type="text/javascript" src="../../config/installparams.js"></script>
+    <script type="text/javascript" src="../../common/js/common.js"></script>
+    <script type="text/javascript" src="features.js"></script>
+    <script type="text/javascript" src="page.js"></script>
+    <script type="text/javascript">
+        //debugger;
+    </script>
+    <style>
+    #center_content {
+        background:url(../../common/img/centerImg.png) no-repeat center;
+    }
+    #arrowImg {
+        position:absolute;
+        right:91px;
+        bottom:8px;
+    }
+    </style>
+    <script type="text/javascript">
+        $(this).keydown(function(event) {
+            if (event.keyCode == 13) {
+                Navigator.nextPage();
+            }
+        });
+        $(function () {
+            if (isSilentlyLaunch()) {
+                Navigator.nextPage();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="main_body">
+        <div class="header_bar" onmousedown="dragWindow(this)">
+            <img id="header_logo_img" class="header_logo" src="../../common/img/header_logo.png" onmousedown="dragWindow(this)">
+            <button id="header_close_img" class="header_close" onkeydown="return false;"></button>
+        </div>
+        <div id="center_content">
+            <div class="contentDiv conter_div content">
+                <h1 class="lang" text="welcomeDescriptionTitle" style="font-size:45px"></h1>
+                <label class="lang" text="welcomeDescription"></label>
+                <div id="arrowImg">
+                    <img src="../../common/img/arrow.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <button id="next" class="lang" text="nextButtonText"></button>
+        </div>
+    </div>   
+</body>
+</html>

@@ -1,0 +1,10 @@
+#install_panel { 
+    height: auto;
+    width: 530px;
+    vertical-align: bottom;
+    display: block;
+    text-align: left;
+    margin-left: 60px;
+    bottom: 200px;
+    font-size: 13px;
+}

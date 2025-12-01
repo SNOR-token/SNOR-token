@@ -1,0 +1,25 @@
+    .language_area {
+        margin-top: 84px;
+        margin-left: 60px;
+        width: 538px;
+        height: 100px;
+        text-align: left;
+    }
+    .select_language {
+        text-align: right;
+        width: 202px;
+        margin-top: 11px;
+        height: 32px;
+    }
+    .license_area {
+        margin-top: 20px;
+        margin-left: 60px;
+        width: 540px;
+        height: 150px;
+        text-align: left;
+    }
+    .license_part {
+        margin-top: 8px;
+        width: 90px;
+        margin-right: 3px;
+    }

@@ -1,0 +1,1 @@
+var appExternal = window.external;
